@@ -1,1 +1,69 @@
+<style>
+#qwe{
+  background-color: black;
+  background-image: url("https://raw.githubusercontent.com/4eDo/am_map/main/images/00_map_base.jpg?token=GHSAT0AAAAAABZUXDRTMSK3GOKK3OZ2IV52Y2NG5BQ");
+  width: 900px;
+  height: 628px;
+  position: fixed;
+  display: block;
+}
+  
+table {border-collapse: collapse;}
+td {width: 5px;}
+tr {height: 5px;}
 
+.landsBorder {
+  display: block;
+  position: fixed;
+}
+
+.landsBorderActive {
+  -webkit-filter: drop-shadow(1px 1px 0 rgb(12,177,145)) drop-shadow(-1px 1px 0 rgb(12,177,145)) drop-shadow(1px -1px 0 rgb(12,177,145)) drop-shadow(-1px -1px 0 rgb(12,177,145));
+    filter: drop-shadow(1px 1px 0 rgb(12,177,145)) drop-shadow(-1px 1px 0 rgb(12,177,145)) drop-shadow(1px -1px 0 rgb(12,177,145)) drop-shadow(-1px -1px 0 rgb(12,177,145));
+}
+
+#land_01 {
+  margin-top: 161px;
+  margin-left: 222px;
+}
+#land_14 {
+  margin-top: 32px;
+  margin-left: 57px;
+}
+#land_16 {
+  margin-top: 93px;
+  margin-left: 27px;
+}
+</style>
+
+<!------------------------------------------------------------------------>
+
+<div id="qwe"></div>
+<img id="land_01" class="landsBorder landsBorderActive" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/01_atrav.png?token=GHSAT0AAAAAABZUXDRSDXG45SEVYDHIDTOIY2NG6VQ" />
+<img id="land_14" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/14_ser_zem.png?token=GHSAT0AAAAAABZUXDRT5F56ZMFQ3ERIYK4WY2NHATA" />
+<img id="land_16" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/16_tavan.png?token=GHSAT0AAAAAABZUXDRTX73JQPHOH6J7FD7MY2NG4TA" />
+
+<!------------------------------------------------------------------------>
+
+<script>function addTable() {
+  var myTableDiv = document.getElementById("qwe");
+
+  var table = document.createElement('TABLE');
+  table.border = '1';
+
+  var tableBody = document.createElement('TBODY');
+  table.appendChild(tableBody);
+
+  for (var i = 0; i < 126; i++) {
+    var tr = document.createElement('TR');
+    tableBody.appendChild(tr);
+
+    for (var j = 0; j < 300; j++) { 
+      var td = document.createElement('TD');
+      td.appendChild(document.createTextNode(""));
+      tr.appendChild(td);
+    }
+  }
+  myTableDiv.appendChild(table);
+}
+//addTable();</script>
