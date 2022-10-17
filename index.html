@@ -61,7 +61,7 @@ tr {height: 5px;}
     let elements = document.querySelectorAll('.landsBorder');
     for (let elem of elements) {
       if(elem.classList.contains("landsBorderActive")) {
-        document.getElementById(elId).classList.remove("landsBorderActive");
+        elem.classList.remove("landsBorderActive");
       }
     }
     document.getElementById(elId).classList.add("landsBorderActive");
