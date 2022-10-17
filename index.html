@@ -12,6 +12,11 @@ table {border-collapse: collapse;}
 td {width: 5px;}
 tr {height: 5px;}
 
+  #aside{display: block;
+    position: fixed;
+    margin-left: 901px;}
+  li {cursor: pointer;}
+  
 .landsBorder {
   display: block;
   position: fixed;
@@ -37,15 +42,33 @@ tr {height: 5px;}
 </style>
 
 <!------------------------------------------------------------------------>
-
+<div id="aside" style="
+    
+"><ul>
+  <li onclick="showBorders('land_01')">01 Атраван</li> 
+  <li>14 Серые Земли</li> 
+  <li>16 Тавантинская Империя</li>
+ </ul></div>
 <div id="qwe"></div>
-<img id="land_01" class="landsBorder landsBorderActive" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/01_atrav.png" />
+<img id="land_01" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/01_atrav.png" />
 <img id="land_14" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/14_ser_zem.png" />
 <img id="land_16" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/16_tavan.png" />
 
 <!------------------------------------------------------------------------>
 
-<script>function addTable() {
+<script>
+  function showBorders(elId){
+    let elements = document.querySelectorAll('.landsBorder');
+    for (let elem of elements) {
+      if(elem.classList.contains("landsBorderActive")) {
+        document.getElementById(elId).classList.remove("bar");
+      }
+    }
+    document.getElementById(elId).classList.add("landsBorderActive");
+  }
+  
+  
+  function addTable() {
   var myTableDiv = document.getElementById("qwe");
 
   var table = document.createElement('TABLE');
