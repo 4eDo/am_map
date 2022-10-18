@@ -56,26 +56,53 @@ tr {height: 5px;}
 <div id="aside" style="
     
 "><ul>
-  <li onclick="showBorders('land_01')" title="Атраван"              >01 Атраван               </li> 
-  <li onclick="showBorders('land_14')" title="Серые Земли"          >14 Серые Земли           </li> 
-  <li onclick="showBorders('land_16')" title="Тавантинская Империя" >16 Тавантинская Империя  </li>
+  <li onclick="showBorders('land_01')" title="Атраван"              >Атраван               </li> 
+  <li onclick="showBorders('land_02')" title="Эльфийская пуща"      >Эльфийская пуща       </li> 
+  <li onclick="showBorders('land_03')" title="Эльвенор"             >Эльвенор              </li> 
+  <li onclick="showBorders('land_04')" title="Гордланд"             >Гордланд              </li> 
+  <li onclick="showBorders('land_05')" title="Хортия"               >Хортия                </li> 
+  <li onclick="showBorders('land_06')" title="Красное братство"     >Красное братство      </li> 
+  <li onclick="showBorders('land_07')" title="Морея"                >Морея                 </li> 
+  <li onclick="showBorders('land_08', 'land_09', 'land_10')" title="Нейтральные территории">Нейтральные территории</li>
+  <li onclick="showBorders('land_11')" title="Нордел"               >Нордел                </li> 
+  <li onclick="showBorders('land_12')" title="Нурастан"             >Нурастан              </li> 
+  <li onclick="showBorders('land_13')" title="Орксланд"             >Орксланд              </li> 
+  <li onclick="showBorders('land_14')" title="Штольхейм"            >Штольхейм             </li>
+  <li onclick="showBorders('land_16')" title="Тавантинская Империя" >Тавантинская Империя  </li>
+  <li onclick="showBorders('land_17')" title="Республика Турл-Титл" >Республика Турл-Титл  </li>
  </ul></div>
 <div id="qwe"></div>
 <img id="land_01" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/01_atrav.png" />
+<img id="land_02" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/02_elf_pusha.png" />
+<img id="land_03" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/03_elvrnor.png" />
+<img id="land_04" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/04_gordland.png" />
+<img id="land_05" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/05_hort.png" />
+<img id="land_06" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/06_kr_brat.png" />
+<img id="land_07" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/07_moreya.png" />
+<img id="land_08" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/08_neutral_1.png" />
+<img id="land_09" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/09_neutral_2.png" />
+<img id="land_10" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/10_neutral_3.png" />
+<img id="land_11" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/11_nordel.png" />
+<img id="land_12" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/12_nurast.png" />
+<img id="land_13" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/13_ork.png" />
 <img id="land_14" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/14_ser_zem.png" />
+<img id="land_15" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/15_shtolh.png" />
 <img id="land_16" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/16_tavan.png" />
+<img id="land_17" class="landsBorder" src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/17_titl.png" />
 
 <!------------------------------------------------------------------------>
 
 <script>
-  function showBorders(elId){
+  function showBorders(){
     let elements = document.querySelectorAll('.landsBorder');
     for (let elem of elements) {
       if(elem.classList.contains("landsBorderActive")) {
         elem.classList.remove("landsBorderActive");
       }
     }
-    document.getElementById(elId).classList.add("landsBorderActive");
+	for (var i = 0; i < arguments.length; i++) {
+		document.getElementById(arguments[i]).classList.add("landsBorderActive");
+	}
   }
   
   
