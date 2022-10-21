@@ -79,6 +79,11 @@ h2:before {
     display: block;
 }
 
+.landsName {
+    pointer-events: all;
+    cursor: pointer; 
+}
+
 </style>
 
 <!------------------------------------------------------------------------>
@@ -106,7 +111,7 @@ h2:before {
 <div id="qwe"></div>
 <div id="land_01" class="landsBorder">
 	<img src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/01_atrav.png" />
-	<h1 style="margin-top: 350px; margin-left: 290px;">Атраван</h1>
+	<h1 class="landsName" style="margin-top: 350px; margin-left: 290px;" onclick="showBorders('land_01')">Атраван</h1>
 	<h2 class="capital" style="margin-top: 447px;margin-left: 440px;">Белуджистан</h2>
 </div>
 <div id="land_02" class="landsBorder"><img src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/02_elf_pusha.png" /></div>
