@@ -114,7 +114,7 @@ h2:before {
 		<img src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/01_atrav.png" />
 		<h1 class="landsName" style="margin-top: 350px; margin-left: 290px;" onclick="showBorders('land_01')">Атраван</h1>
 		<h2 class="capital" style="margin-top: 447px;margin-left: 440px;">Белуджистан</h2>
-		<textarea class="info" hidden></textarea>
+		<textarea class="info" hidden>Qwerty uiop <b>Asd fgh jkl</b> !!!1!</textarea>
 	</div>
 	<div id="land_02" class="landsBorder"><img src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/02_elf_pusha.png" /></div>
 	<div id="land_03" class="landsBorder"><img src="https://raw.githubusercontent.com/4eDo/am_map/main/images/borders/03_elvrnor.png" /></div>
@@ -150,7 +150,7 @@ h2:before {
 	for (var i = 0; i < arguments.length; i++) {
 		moreInfo += "<h3>" + document.querySelector("#"+arguments[i]+" h1").textContent + "</h3>";
 		moreInfo += "<h4>Столица: " + document.querySelector("#"+arguments[i]+" h2").textContent + "</h4>";
-		moreInfo += "<h4>О стране:</h4><div>" + document.querySelector("#"+arguments[i]+".info").value + "</div>";
+		moreInfo += "<h4>О стране:</h4><div>" + document.querySelector("#"+arguments[i]+" .info").value + "</div>";
 		document.getElementById(arguments[i]).classList.add("landsBorderActive");
 	}
 	  moreInfo += "<button>Посмотреть подробную карту</button>";
