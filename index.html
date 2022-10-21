@@ -148,9 +148,9 @@ h2:before {
     }
 	  let moreInfo = "";
 	for (var i = 0; i < arguments.length; i++) {
-		moreInfo += "<h3>" + document.querySelector(arguments[i]+" h1").textContent + "</h3>";
-		moreInfo += "<h4>Столица: " + document.querySelector(arguments[i]+" h2").textContent + "</h4>";
-		moreInfo += "<h4>О стране:</h4><div>" + document.querySelector(arguments[i]+".info").value + "</div>";
+		moreInfo += "<h3>" + document.querySelector("#"+arguments[i]+" h1").textContent + "</h3>";
+		moreInfo += "<h4>Столица: " + document.querySelector("#"+arguments[i]+" h2").textContent + "</h4>";
+		moreInfo += "<h4>О стране:</h4><div>" + document.querySelector("#"+arguments[i]+".info").value + "</div>";
 		document.getElementById(arguments[i]).classList.add("landsBorderActive");
 	}
 	  moreInfo += "<button>Посмотреть подробную карту</button>";
